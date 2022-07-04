@@ -4,7 +4,9 @@
   "description": "Node.js and MySQL app",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "sonar": "node sonar-project.js"
   },
   "repository": {
     "type": "git",
@@ -21,9 +23,5 @@
     "express": "^4.12.3",
     "mysql": "^2.6.2",
     "sonarqube-scanner": "^2.8.1"
-  },
-  "scripts": {
-    "start": "node app.js",
-    "sonar": "node sonar-project.js"
-  },
+  }
 }
