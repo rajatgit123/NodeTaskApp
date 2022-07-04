@@ -18,6 +18,6 @@ app.get('/showSignUpPage',function(req,res){
   res.sendFile('signup.html',{'root':__dirname + '/templates'})
 })
 
-app.listen(3000,function(){
-    console.log('Node server running @ http://localhost:3000')
+app.listen(80,function(){
+    console.log('Node server running @ http://localhost:80')
 });
