@@ -4,7 +4,7 @@
             "name": "web-server",
             "image": "514141280285.dkr.ecr.us-east-2.amazonaws.com/docker-app-registry:latest",
             "cpu": 1024,
-            "memory": 256,
+            "memory": 512,
 	    "portMappings": [
                 {
                     "containerPort": 80,
