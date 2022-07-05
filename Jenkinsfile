@@ -71,8 +71,8 @@ pipeline {
 		        
 			aws ecs register-task-definition --cli-input-json file://web-server.json
 			OLD_TASK_ID=`aws ecs list-tasks --cluster nodejs --desired-status RUNNING --family web-server --region us-east-2 | egrep "task" | tr "/" " " |  awk '{print $3}' | sed 's/"$//'`
-                        aws ecs stop-task --cluster nodejs --task ${OLD_TASK_ID}
-			ClusterUpdate=`aws ecs update-service --cluster nodejs --service nodejs --task-definition web-server --desired-count 2`
+			aws ecs stop-task --cluster nodejs --task ${OLD_TASK_ID}
+			ClusterUpdate=`aws ecs update-service --cluster nodejs --service nodejs --task-definition web-server --desired-count 1`
 			 
       
 			'''
