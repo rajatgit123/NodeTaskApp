@@ -1,4 +1,4 @@
-## Creating a web app using Node.js and MySQL.
+## Creating a web app using Node.js & MySQL.
 You can find the full tutorial on [CodeHandbook](http://codehandbook.org/creating-a-web-app-using-node-js-mysql-getting-started/).
 
 
