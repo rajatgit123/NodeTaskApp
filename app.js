@@ -1,6 +1,31 @@
 var express = require('express');
 var app = express();
 
+var mysql = require('mysql')
+
+var connection = mysql.createConnection({
+    host:'database-2.chi9au2endly.us-east-2.rds.amazonaws.com',
+    user:'rajat',
+    password:'rajatglobant'
+})
+
+// Connecting to database
+connection.connect(function(err) {
+    if(err){
+      console.log("Error in the connection")
+      console.log(err)
+    }
+    else{
+      console.log(`Database Connected`)
+      connection.query(`SHOW DATABASES`,
+      function (err, result) {
+        if(err)
+          console.log(`Error executing the query - ${err}`)
+        else
+          console.log("Result: ",result)
+      })
+    }
+})
 
 app.use('/node_modules',  express.static(__dirname + '/node_modules'));
 app.use('/style',  express.static(__dirname + '/style'));
