@@ -106,7 +106,7 @@ pipeline {
          stage('Setting up OWASP ZAP') {
              steps {
                  script {
-                         echo "Pulling up last OWASP ZAP container --> Start"
+                         echo "Pulling up the last OWASP ZAP container --> Start"
                          sh 'docker pull owasp/zap2docker-stable'
                          echo "Pulling up last VMS container --> End"
                          echo "Starting container --> Start"
